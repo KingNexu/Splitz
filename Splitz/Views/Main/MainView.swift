@@ -11,9 +11,21 @@ struct MainView: View {
     var body: some View {
         //TODO: Implement Header
         VStack {
-            MainViewNavigationBar()
+            ZStack{
+                VStack {
+                    Spacer()
+                    MainViewList()
+                }
+                Spacer()
+                VStack {
+                    MainViewNavigationBar()
+                    Spacer()
+                }
+            }
         }
-        .alignmentGuide(VerticalAlignment.top) {_ in 1}
+        .background(.gray)
+        .ignoresSafeArea(.all, edges: .vertical)
+        
     }
 }
 

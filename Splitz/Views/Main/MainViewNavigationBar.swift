@@ -26,7 +26,7 @@ struct MainViewNavigationBar: View {
             Spacer()
         }
         .padding()
-        .padding(.top, 50)
+        .frame(height: UIScreen.height * 0.15)
         .headerShape(background: Color.background.navigationBar, radius: 35)
     }
 }
