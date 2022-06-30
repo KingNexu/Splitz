@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         //TODO: Implement Header
-        VStack {
+        VStack(alignment: .trailing) {
             ZStack{
                 VStack {
                     Spacer()
@@ -23,7 +23,16 @@ struct MainView: View {
                 }
             }
         }
-        .background(.gray)
+        .overlay(alignment: .bottomTrailing, content: {
+            Button(action: {}, label: {
+                Image(systemName: "plus")
+                    .font(.system(size: 35))
+            })
+                .buttonStyle(NewItemButtonStyle(bgGradient: LinearGradient.navigationBarGradient, fgColor: Color.black, size: 70))
+                .padding(.vertical, 35)
+                .padding(.horizontal)
+        })
+        .background(.thickMaterial)
         .ignoresSafeArea(.all, edges: .vertical)
         
     }

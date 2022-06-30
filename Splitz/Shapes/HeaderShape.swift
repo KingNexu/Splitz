@@ -22,10 +22,10 @@ struct ComicShape: Shape {
 }
 
 extension View {
-    func headerShape(background: Color, radius: CGFloat) -> some View {
+    func headerShape(background: [Color], radius: CGFloat) -> some View {
         self
             .padding(.bottom, radius)
-            .background(background)
+            .background(LinearGradient(colors: background, startPoint: .leading, endPoint: .topTrailing))
             .clipShape(ComicShape(radius: radius))
     }
 }

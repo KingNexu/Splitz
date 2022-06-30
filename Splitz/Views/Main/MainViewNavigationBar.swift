@@ -20,14 +20,15 @@ struct MainViewNavigationBar: View {
                 .font(.system(size: 35, weight: .bold, design: .default))
             Button(action: {}, label: {
                 Image(systemName: "gearshape.fill")
-                    .foregroundColor(Color.background.navigationBar)
+                    .opacity(0)
                     .font(.system(size: 30))
             })
             Spacer()
         }
-        .padding()
+        .padding(.top, 30)
+        .padding(.horizontal)
         .frame(height: UIScreen.height * 0.15)
-        .headerShape(background: Color.background.navigationBar, radius: 35)
+        .headerShape(background: [Color.background.navigationBarGradientStart, Color.background.navigationBarGradientEnd], radius: 35)
     }
 }
 

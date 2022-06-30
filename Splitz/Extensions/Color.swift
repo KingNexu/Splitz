@@ -15,5 +15,7 @@ extension Color {
     }
     enum background {
         static let navigationBar = Color("navigationBar")
+        static let navigationBarGradientStart = Color("navigationBarGradientStart")
+        static let navigationBarGradientEnd = Color("navigationBarGradientEnd")
     }
 }
