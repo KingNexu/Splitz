@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F0F286C25E200554395 /* NewButtonStyle.swift */; };
 		03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F11286DAD9C00554395 /* Gradient.swift.swift */; };
-		037B8799286DEA6600D442F4 /* NewListView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037B8798286DEA6600D442F4 /* NewListView.swift.swift */; };
 		0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391C2B7286AFFFA002532C4 /* MainViewList.swift */; };
 		0391C2BB286C2277002532C4 /* ScrollViewReactiveHeader in Frameworks */ = {isa = PBXBuildFile; productRef = 0391C2BA286C2277002532C4 /* ScrollViewReactiveHeader */; };
+		039C39AF286DED24002324B4 /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39AE286DED24002324B4 /* NewListView.swift */; };
+		039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */; };
 		03A2C499286632E9003033D7 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2C498286632E9003033D7 /* UIScreen.swift */; };
 		03A2C49E28663A04003033D7 /* HeaderShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2C49D28663A04003033D7 /* HeaderShape.swift */; };
 		03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2C4A12866F26E003033D7 /* MainViewNavigationBar.swift */; };
@@ -26,8 +27,9 @@
 /* Begin PBXFileReference section */
 		03361F0F286C25E200554395 /* NewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonStyle.swift; sourceTree = "<group>"; };
 		03361F11286DAD9C00554395 /* Gradient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift.swift; sourceTree = "<group>"; };
-		037B8798286DEA6600D442F4 /* NewListView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift.swift; sourceTree = "<group>"; };
 		0391C2B7286AFFFA002532C4 /* MainViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewList.swift; sourceTree = "<group>"; };
+		039C39AE286DED24002324B4 /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
+		039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonStyle.swift.swift; sourceTree = "<group>"; };
 		03A2C498286632E9003033D7 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		03A2C49D28663A04003033D7 /* HeaderShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShape.swift; sourceTree = "<group>"; };
 		03A2C4A12866F26E003033D7 /* MainViewNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigationBar.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				03361F0F286C25E200554395 /* NewButtonStyle.swift */,
+				039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -63,7 +66,7 @@
 		0391C2BC286C248A002532C4 /* NewList */ = {
 			isa = PBXGroup;
 			children = (
-				037B8798286DEA6600D442F4 /* NewListView.swift.swift */,
+				039C39AE286DED24002324B4 /* NewListView.swift */,
 			);
 			path = NewList;
 			sourceTree = "<group>";
@@ -220,8 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */,
 				03BD838428620CBA007DBBD1 /* MainView.swift in Sources */,
-				037B8799286DEA6600D442F4 /* NewListView.swift.swift in Sources */,
 				0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */,
 				03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */,
 				03A2C499286632E9003033D7 /* UIScreen.swift in Sources */,
@@ -231,6 +234,7 @@
 				03A2C4A42866F30D003033D7 /* Color.swift in Sources */,
 				03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */,
 				03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */,
+				039C39AF286DED24002324B4 /* NewListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
