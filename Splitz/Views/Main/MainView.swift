@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var showSheet = false
+    
     var body: some View {
         //TODO: Implement Header
         VStack(alignment: .trailing) {
@@ -24,10 +26,18 @@ struct MainView: View {
             }
         }
         .overlay(alignment: .bottomTrailing, content: {
-            Button(action: {}, label: {
+            Button(action: {
+                //Show sheet
+                showSheet = true
+            }, label: {
                 Image(systemName: "plus")
                     .font(.system(size: 35))
             })
+                .sheet(isPresented: $showSheet, onDismiss: {
+                    
+                }, content: {
+                    NewListView()
+                })
                 .buttonStyle(NewItemButtonStyle(bgGradient: LinearGradient.navigationBarGradient, fgColor: Color.black, size: 70))
                 .padding(.vertical, 35)
                 .padding(.horizontal)

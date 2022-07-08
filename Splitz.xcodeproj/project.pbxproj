@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032E8C3B28774CA7009EC28B /* NewTextFieldStyle.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C3A28774CA7009EC28B /* NewTextFieldStyle.swift.swift */; };
+		032E8C412877724C009EC28B /* Splitz_Datamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C3F2877724C009EC28B /* Splitz_Datamodel.xcdatamodeld */; };
+		032E8C4528777444009EC28B /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C4428777444009EC28B /* CoreDataStorage.swift */; };
+		032E8C4728777468009EC28B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C4628777468009EC28B /* Storage.swift */; };
 		03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F0F286C25E200554395 /* NewButtonStyle.swift */; };
 		03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F11286DAD9C00554395 /* Gradient.swift.swift */; };
 		0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391C2B7286AFFFA002532C4 /* MainViewList.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032E8C3A28774CA7009EC28B /* NewTextFieldStyle.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTextFieldStyle.swift.swift; sourceTree = "<group>"; };
+		032E8C402877724C009EC28B /* Splitz_Datamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Splitz_Datamodel.xcdatamodel; sourceTree = "<group>"; };
+		032E8C4428777444009EC28B /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		032E8C4628777468009EC28B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		03361F0F286C25E200554395 /* NewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonStyle.swift; sourceTree = "<group>"; };
 		03361F11286DAD9C00554395 /* Gradient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift.swift; sourceTree = "<group>"; };
 		0391C2B7286AFFFA002532C4 /* MainViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewList.swift; sourceTree = "<group>"; };
@@ -54,11 +62,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032E8C3C287761B2009EC28B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		032E8C3D287761CE009EC28B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		032E8C3E2877621C009EC28B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		032E8C42287773F9009EC28B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				032E8C4328777435009EC28B /* CoreData */,
+				032E8C4628777468009EC28B /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		032E8C4328777435009EC28B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				032E8C4428777444009EC28B /* CoreDataStorage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		03361F0E286C25CC00554395 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
 				03361F0F286C25E200554395 /* NewButtonStyle.swift */,
 				039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */,
+				032E8C3A28774CA7009EC28B /* NewTextFieldStyle.swift.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -128,11 +175,16 @@
 		03BD838028620CBA007DBBD1 /* Splitz */ = {
 			isa = PBXGroup;
 			children = (
+				032E8C42287773F9009EC28B /* Storage */,
+				032E8C3E2877621C009EC28B /* Models */,
+				032E8C3D287761CE009EC28B /* Repositories */,
+				032E8C3C287761B2009EC28B /* ViewModels */,
 				03A2C49628663205003033D7 /* Views */,
 				03A2C49728663262003033D7 /* Extensions */,
 				03361F0E286C25CC00554395 /* Styles */,
 				03A2C49C286639B7003033D7 /* Shapes */,
 				03BD838128620CBA007DBBD1 /* SplitzApp.swift */,
+				032E8C3F2877724C009EC28B /* Splitz_Datamodel.xcdatamodeld */,
 				03BD838528620CBB007DBBD1 /* Assets.xcassets */,
 				03BD838728620CBB007DBBD1 /* Preview Content */,
 			);
@@ -223,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032E8C4528777444009EC28B /* CoreDataStorage.swift in Sources */,
 				039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */,
+				032E8C3B28774CA7009EC28B /* NewTextFieldStyle.swift.swift in Sources */,
 				03BD838428620CBA007DBBD1 /* MainView.swift in Sources */,
 				0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */,
 				03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */,
@@ -234,7 +288,9 @@
 				03A2C4A42866F30D003033D7 /* Color.swift in Sources */,
 				03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */,
 				03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */,
+				032E8C4728777468009EC28B /* Storage.swift in Sources */,
 				039C39AF286DED24002324B4 /* NewListView.swift in Sources */,
+				032E8C412877724C009EC28B /* Splitz_Datamodel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +514,19 @@
 			productName = ScrollViewReactiveHeader;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		032E8C3F2877724C009EC28B /* Splitz_Datamodel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				032E8C402877724C009EC28B /* Splitz_Datamodel.xcdatamodel */,
+			);
+			currentVersion = 032E8C402877724C009EC28B /* Splitz_Datamodel.xcdatamodel */;
+			path = Splitz_Datamodel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03BD837628620CBA007DBBD1 /* Project object */;
 }

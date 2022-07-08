@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NewListView: View {
-    @State var name = "Test"
+    @State var name = ""
     @State private var personCount: Int = 3
     
     var body: some View {
@@ -16,8 +16,8 @@ struct NewListView: View {
             GroupBox {
                 TextField("Text", text: $name)
                     .textInputAutocapitalization(.sentences)
-                    .textFieldStyle(.roundedBorder)
-                .padding()
+                    .textFieldStyle(NewTextFieldStyle(bgColor: Color.white, fontSize: 30, cornerRadius: 12))
+                    .padding()
             }
             .padding()
             GroupBox {
@@ -28,7 +28,7 @@ struct NewListView: View {
                         .font(.system(size: 22, weight: .bold, design: .default))
                     HStack{
                         Button(action: {
-                            if personCount > 0{
+                            if personCount > 1{
                                 personCount -= 1
                             }
                         }, label: {
@@ -72,6 +72,7 @@ struct NewListView: View {
             Capsule()
                 .frame(width: UIScreen.main.bounds.width * 0.3, height: 5)
             .foregroundColor(.gray)
+            .padding(.top)
         })
     }
 }
