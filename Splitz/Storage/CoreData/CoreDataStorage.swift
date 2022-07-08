@@ -1,3 +1,4 @@
+
 //
 //  CoreDataStorage.swift
 //  Splitz
@@ -22,6 +23,16 @@ struct CoreDataStorage: Storage {
     var mainContext: NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
+    
+    var taskContext: ManagedContext {
+
+        let context = self.persistentContainer.newBackgroundContext()
+        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        context.undoManager = nil
+
+        return context
+    }
+    
     
     //INIT
     init(){
@@ -48,5 +59,21 @@ struct CoreDataStorage: Storage {
         }
     }
     
+    func saveContext(_ context: NSManagedObjectContext) {
+        guard context != mainContext else {
+            saveContext()
+            return
+        }
+
+        context.performAndWait {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+
+            self.saveContext(self.mainContext)
+        }
+    }
     
 }

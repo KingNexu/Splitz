@@ -14,10 +14,12 @@ public protocol Storage {
     associatedtype PersistentContainer
     associatedtype ManagedContext
     
-    //var persistentContainer: PersistanceContainer { get }
+    var persistentContainer: PersistentContainer { get }
     var mainContext: ManagedContext { get }
-    //
+    var taskContext: ManagedContext { get }
+    
     func saveContext()
+    func saveContext(_ context: ManagedContext)
     
     init()
     
