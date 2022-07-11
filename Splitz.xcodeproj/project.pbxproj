@@ -27,6 +27,7 @@
 		03BBAC2A287C16E200626A18 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBAC29287C16E200626A18 /* UserDao.swift */; };
 		03BBAC2C287C1C4F00626A18 /* CdBill+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBAC2B287C1C4F00626A18 /* CdBill+Additions.swift */; };
 		03BBAC2E287C1C9500626A18 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBAC2D287C1C9500626A18 /* Bill.swift */; };
+		03BBAC30287C1E2900626A18 /* BillDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBAC2F287C1E2900626A18 /* BillDao.swift */; };
 		03BD838228620CBA007DBBD1 /* SplitzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD838128620CBA007DBBD1 /* SplitzApp.swift */; };
 		03BD838428620CBA007DBBD1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD838328620CBA007DBBD1 /* MainView.swift */; };
 		03BD838628620CBB007DBBD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BD838528620CBB007DBBD1 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		03BBAC29287C16E200626A18 /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		03BBAC2B287C1C4F00626A18 /* CdBill+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CdBill+Additions.swift"; sourceTree = "<group>"; };
 		03BBAC2D287C1C9500626A18 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		03BBAC2F287C1E2900626A18 /* BillDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDao.swift; sourceTree = "<group>"; };
 		03BD837E28620CBA007DBBD1 /* Splitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BD838128620CBA007DBBD1 /* SplitzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitzApp.swift; sourceTree = "<group>"; };
 		03BD838328620CBA007DBBD1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				03BBAC22287BF7A700626A18 /* Dao.swift */,
 				03BBAC29287C16E200626A18 /* UserDao.swift */,
+				03BBAC2F287C1E2900626A18 /* BillDao.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */,
 				032E8C3B28774CA7009EC28B /* NewTextFieldStyle.swift.swift in Sources */,
 				03BD838428620CBA007DBBD1 /* MainView.swift in Sources */,
+				03BBAC30287C1E2900626A18 /* BillDao.swift in Sources */,
 				0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */,
 				03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */,
 				03A2C499286632E9003033D7 /* UIScreen.swift in Sources */,

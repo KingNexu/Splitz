@@ -12,4 +12,9 @@ struct Bill: Storable {
     var id: UUID
     var caption: String
     
+    init(cdBill: CdBill) {
+        self.id = cdBill.id!
+        self.caption = cdBill.caption!
+    }
+    
 }
