@@ -13,6 +13,8 @@
 		032E8C4728777468009EC28B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C4628777468009EC28B /* Storage.swift */; };
 		03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F0F286C25E200554395 /* NewButtonStyle.swift */; };
 		03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F11286DAD9C00554395 /* Gradient.swift.swift */; };
+		0373AE00287C3A60000A7DFF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373ADFF287C3A60000A7DFF /* Repository.swift */; };
+		0373AE02287C3A71000A7DFF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373AE01287C3A71000A7DFF /* UserRepository.swift */; };
 		0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391C2B7286AFFFA002532C4 /* MainViewList.swift */; };
 		0391C2BB286C2277002532C4 /* ScrollViewReactiveHeader in Frameworks */ = {isa = PBXBuildFile; productRef = 0391C2BA286C2277002532C4 /* ScrollViewReactiveHeader */; };
 		039C39AF286DED24002324B4 /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39AE286DED24002324B4 /* NewListView.swift */; };
@@ -32,6 +34,8 @@
 		03BD838428620CBA007DBBD1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD838328620CBA007DBBD1 /* MainView.swift */; };
 		03BD838628620CBB007DBBD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BD838528620CBB007DBBD1 /* Assets.xcassets */; };
 		03BD838928620CBB007DBBD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BD838828620CBB007DBBD1 /* Preview Assets.xcassets */; };
+		03D34DEF287D5F380045D910 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D34DEE287D5F380045D910 /* MainViewViewModel.swift */; };
+		03D34DF1287D5FE60045D910 /* BillRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D34DF0287D5FE60045D910 /* BillRepository.swift */; };
 		03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA61602868E6EB0056CB90 /* MainViewListItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,8 @@
 		032E8C4628777468009EC28B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		03361F0F286C25E200554395 /* NewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonStyle.swift; sourceTree = "<group>"; };
 		03361F11286DAD9C00554395 /* Gradient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift.swift; sourceTree = "<group>"; };
+		0373ADFF287C3A60000A7DFF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Splitz/Dao/Repository.swift; sourceTree = SOURCE_ROOT; };
+		0373AE01287C3A71000A7DFF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserRepository.swift; path = Splitz/Dao/UserRepository.swift; sourceTree = SOURCE_ROOT; };
 		0391C2B7286AFFFA002532C4 /* MainViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewList.swift; sourceTree = "<group>"; };
 		039C39AE286DED24002324B4 /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
 		039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonStyle.swift.swift; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 		03BD838328620CBA007DBBD1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		03BD838528620CBB007DBBD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BD838828620CBB007DBBD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03D34DEE287D5F380045D910 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		03D34DF0287D5FE60045D910 /* BillRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillRepository.swift; path = Splitz/Views/Main/BillRepository.swift; sourceTree = SOURCE_ROOT; };
 		03DA61602868E6EB0056CB90 /* MainViewListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,16 +84,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		032E8C3C287761B2009EC28B /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		032E8C3D287761CE009EC28B /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				0373ADFF287C3A60000A7DFF /* Repository.swift */,
+				0373AE01287C3A71000A7DFF /* UserRepository.swift */,
+				03D34DF0287D5FE60045D910 /* BillRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 				03A2C4A12866F26E003033D7 /* MainViewNavigationBar.swift */,
 				0391C2B7286AFFFA002532C4 /* MainViewList.swift */,
 				03DA61602868E6EB0056CB90 /* MainViewListItem.swift */,
+				03D34DEE287D5F380045D910 /* MainViewViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -204,7 +209,6 @@
 				032E8C42287773F9009EC28B /* Storage */,
 				032E8C3E2877621C009EC28B /* Models */,
 				032E8C3D287761CE009EC28B /* Repositories */,
-				032E8C3C287761B2009EC28B /* ViewModels */,
 				03A2C49628663205003033D7 /* Views */,
 				03A2C49728663262003033D7 /* Extensions */,
 				03361F0E286C25CC00554395 /* Styles */,
@@ -323,7 +327,9 @@
 				032E8C4528777444009EC28B /* CoreDataStorage.swift in Sources */,
 				039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */,
 				032E8C3B28774CA7009EC28B /* NewTextFieldStyle.swift.swift in Sources */,
+				0373AE02287C3A71000A7DFF /* UserRepository.swift in Sources */,
 				03BD838428620CBA007DBBD1 /* MainView.swift in Sources */,
+				03D34DF1287D5FE60045D910 /* BillRepository.swift in Sources */,
 				03BBAC30287C1E2900626A18 /* BillDao.swift in Sources */,
 				0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */,
 				03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */,
@@ -331,6 +337,7 @@
 				03BBAC2C287C1C4F00626A18 /* CdBill+Additions.swift in Sources */,
 				03BBAC2A287C16E200626A18 /* UserDao.swift in Sources */,
 				03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */,
+				0373AE00287C3A60000A7DFF /* Repository.swift in Sources */,
 				03A2C49E28663A04003033D7 /* HeaderShape.swift in Sources */,
 				03BD838228620CBA007DBBD1 /* SplitzApp.swift in Sources */,
 				03BBAC2E287C1C9500626A18 /* Bill.swift in Sources */,
@@ -340,6 +347,7 @@
 				03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */,
 				03BBAC23287BF7A800626A18 /* Dao.swift in Sources */,
 				03BBAC25287C10DD00626A18 /* User.swift in Sources */,
+				03D34DEF287D5F380045D910 /* MainViewViewModel.swift in Sources */,
 				032E8C4728777468009EC28B /* Storage.swift in Sources */,
 				039C39AF286DED24002324B4 /* NewListView.swift in Sources */,
 				032E8C412877724C009EC28B /* Splitz_Datamodel.xcdatamodeld in Sources */,
