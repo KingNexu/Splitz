@@ -27,4 +27,5 @@ class UserDao: Dao<User, CdUser> {
         return cdUser
 
     }
+    
 }
