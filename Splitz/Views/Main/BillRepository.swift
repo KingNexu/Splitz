@@ -20,7 +20,11 @@ class BillRepository: Repository {
     }
     
     func deleteBill(id: UUID) async throws {
-        try await dao.deleteBill(id: id)
+        try await dao.deleteBill(billId: id)
+    }
+    
+    func getBill(id: UUID) async throws -> Bill {
+        return try await dao.getBill(billId: id)
     }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 
 class BillDao: Dao<Bill, CdBill> {
@@ -14,8 +15,17 @@ class BillDao: Dao<Bill, CdBill> {
         return try await getAll().map { $0.decode() }
     }
     
-    func deleteBill(id: UUID) async throws {
-        try await delete(predicates: [NSPredicate(format: "id = %@", id.uuidString)])
+    func deleteBill(billId: UUID) async throws {
+        try await delete(predicates: [NSPredicate(format: "id = %@", billId.uuidString)])
+    }
+    
+    func getBill(billId: UUID) async throws -> Bill {
+        let backgroundContext = storage.taskContext
+        
+        let cdBill: CdBill = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "id = %@", billId.uuidString)]) as! CdBill
+        
+        return cdBill.decode()
+        
     }
     
 }
