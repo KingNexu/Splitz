@@ -22,10 +22,10 @@ class BillDao: Dao<Bill, CdBill> {
     func getBill(billId: UUID) async throws -> Bill {
         let backgroundContext = storage.taskContext
         
+        //TODO: KeyString 
         let cdBill: CdBill = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "id = %@", billId.uuidString)]) as! CdBill
         
         return cdBill.decode()
         
     }
-    
 }

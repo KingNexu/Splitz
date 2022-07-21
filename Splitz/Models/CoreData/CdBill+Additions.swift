@@ -17,5 +17,4 @@ extension CdBill {
     func decode() -> Bill {
         return Bill(cdBill: self)
     }
-    
 }
