@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainViewListItem: View {
+    
+    var name: String
+    
     var body: some View {
         HStack(alignment: .center) {
             //Icon
@@ -15,7 +18,7 @@ struct MainViewListItem: View {
                 .font(.system(size: 25))
                 .padding()
             VStack(alignment: .leading) {
-                Text("List Name")
+                Text(name)
                     .font(.system(size: 25, weight: .regular, design: .default))
                 Text("Date")
                     .font(.system(size: 15, weight: .ultraLight, design: .default))
@@ -31,6 +34,6 @@ struct MainViewListItem: View {
 
 struct MainViewListItem_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewListItem()
+        MainViewListItem(name: "List name")
     }
 }
