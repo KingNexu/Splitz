@@ -28,4 +28,25 @@ class BillDao: Dao<Bill, CdBill> {
         return cdBill.decode()
         
     }
+    
+    func insertOrUpdat(_ bill: Bill) async throws -> Bill {
+        
+        let backgroundContext = storage.taskContext
+        
+        let cdBill: CdBill
+        
+        let fetchedBill: CdBill? = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "id = %@", bill.id.uuidString)]) as! CdBill?
+        
+        if fetchedBill != nil {
+            cdBill = fetchedBill!
+        } else {
+            cdBill = CdBill(context: backgroundContext)
+        }
+        
+        cdBill.encode(entity: bill)
+        
+        self.storage.saveContext(backgroundContext)
+        
+        return bill
+    }
 }

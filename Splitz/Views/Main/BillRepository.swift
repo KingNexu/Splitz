@@ -23,11 +23,11 @@ class BillRepository: Repository {
         try await dao.deleteBill(billId: id)
     }
     
-    /// Gets a Bill based of the Id
-    /// - Parameter id: Unice Identifier of one Bill
-    /// - Returns: Returns a Swift Bill
     func getBill(id: UUID) async throws -> Bill {
         return try await dao.getBill(billId: id)
     }
-    
+   
+    func insertOrUpdate(bill: Bill) async throws -> Bill {
+        return try await dao.insertOrUpdat(bill)
+    }
 }
