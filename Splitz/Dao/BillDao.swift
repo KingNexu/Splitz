@@ -49,4 +49,18 @@ class BillDao: Dao<Bill, CdBill> {
         
         return bill
     }
+    
+    func insert(bill: Bill) async throws -> Bill{
+        
+        let backgroundContext = storage.taskContext
+        
+        let cdBill: CdBill = CdBill(context: backgroundContext)
+        cdBill.encode(entity: bill)
+        
+        //TODO: Add Relationship
+        
+        self.storage.saveContext(backgroundContext)
+        
+        return cdBill.decode()
+    }
 }

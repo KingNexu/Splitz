@@ -13,6 +13,12 @@ struct Bill: Storable {
     var caption: String
     var users: [User]
     
+    init(id: UUID, caption: String, users: [User]) {
+        self.id = id
+        self.caption = caption
+        self.users = users
+    }
+    
     init(cdBill: CdBill) {
         self.id = cdBill.id!
         self.caption = cdBill.caption!

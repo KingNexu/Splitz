@@ -30,4 +30,8 @@ class BillRepository: Repository {
     func insertOrUpdate(bill: Bill) async throws -> Bill {
         return try await dao.insertOrUpdat(bill)
     }
+    
+    func insert(bill: Bill) async throws -> Bill {
+        return try await dao.insert(bill: bill)
+    }
 }

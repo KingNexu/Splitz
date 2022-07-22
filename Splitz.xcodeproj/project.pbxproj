@@ -38,6 +38,7 @@
 		03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA61602868E6EB0056CB90 /* MainViewListItem.swift */; };
 		03DABAA8288AB30900722CA6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DABAA7288AB30900722CA6 /* ViewModel.swift */; };
 		03DABAAB288AB48100722CA6 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DABAAA288AB48100722CA6 /* Injector.swift */; };
+		03DABAAD288B3B5300722CA6 /* NewViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DABAAC288B3B5300722CA6 /* NewViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		03DA61602868E6EB0056CB90 /* MainViewListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListItem.swift; sourceTree = "<group>"; };
 		03DABAA7288AB30900722CA6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		03DABAAA288AB48100722CA6 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		03DABAAC288B3B5300722CA6 /* NewViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				039C39AE286DED24002324B4 /* NewListView.swift */,
+				03DABAAC288B3B5300722CA6 /* NewViewViewModel.swift */,
 			);
 			path = NewList;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				03BBAC25287C10DD00626A18 /* User.swift in Sources */,
 				03D34DEF287D5F380045D910 /* MainViewListViewModel.swift in Sources */,
 				032E8C4728777468009EC28B /* Storage.swift in Sources */,
+				03DABAAD288B3B5300722CA6 /* NewViewViewModel.swift in Sources */,
 				03DABAAB288AB48100722CA6 /* Injector.swift in Sources */,
 				039C39AF286DED24002324B4 /* NewListView.swift in Sources */,
 				032E8C412877724C009EC28B /* Splitz_Datamodel.xcdatamodeld in Sources */,
