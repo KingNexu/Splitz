@@ -36,6 +36,8 @@
 		03D34DEF287D5F380045D910 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D34DEE287D5F380045D910 /* MainViewViewModel.swift */; };
 		03D34DF1287D5FE60045D910 /* BillRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D34DF0287D5FE60045D910 /* BillRepository.swift */; };
 		03DA61612868E6EB0056CB90 /* MainViewListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA61602868E6EB0056CB90 /* MainViewListItem.swift */; };
+		03DABAA8288AB30900722CA6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DABAA7288AB30900722CA6 /* ViewModel.swift */; };
+		03DABAAB288AB48100722CA6 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DABAAA288AB48100722CA6 /* Injector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		03D34DEE287D5F380045D910 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		03D34DF0287D5FE60045D910 /* BillRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillRepository.swift; path = Splitz/Views/Main/BillRepository.swift; sourceTree = SOURCE_ROOT; };
 		03DA61602868E6EB0056CB90 /* MainViewListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListItem.swift; sourceTree = "<group>"; };
+		03DABAA7288AB30900722CA6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		03DABAAA288AB48100722CA6 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			children = (
 				03A2C49F2866F240003033D7 /* Main */,
 				0391C2BC286C248A002532C4 /* NewList */,
+				03DABAA7288AB30900722CA6 /* ViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				03C1AE0A287841C00072FC63 /* Dao */,
+				03DABAA9288AB47000722CA6 /* Di */,
 				032E8C42287773F9009EC28B /* Storage */,
 				032E8C3E2877621C009EC28B /* Models */,
 				032E8C3D287761CE009EC28B /* Repositories */,
@@ -244,6 +250,14 @@
 				03BBAC2B287C1C4F00626A18 /* CdBill+Additions.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		03DABAA9288AB47000722CA6 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				03DABAAA288AB48100722CA6 /* Injector.swift */,
+			);
+			path = Di;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +341,7 @@
 				0373AE02287C3A71000A7DFF /* UserRepository.swift in Sources */,
 				03BD838428620CBA007DBBD1 /* MainView.swift in Sources */,
 				03D34DF1287D5FE60045D910 /* BillRepository.swift in Sources */,
+				03DABAA8288AB30900722CA6 /* ViewModel.swift in Sources */,
 				03BBAC30287C1E2900626A18 /* BillDao.swift in Sources */,
 				0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */,
 				03A2C4A22866F26E003033D7 /* MainViewNavigationBar.swift in Sources */,
@@ -346,6 +361,7 @@
 				03BBAC25287C10DD00626A18 /* User.swift in Sources */,
 				03D34DEF287D5F380045D910 /* MainViewViewModel.swift in Sources */,
 				032E8C4728777468009EC28B /* Storage.swift in Sources */,
+				03DABAAB288AB48100722CA6 /* Injector.swift in Sources */,
 				039C39AF286DED24002324B4 /* NewListView.swift in Sources */,
 				032E8C412877724C009EC28B /* Splitz_Datamodel.xcdatamodeld in Sources */,
 			);

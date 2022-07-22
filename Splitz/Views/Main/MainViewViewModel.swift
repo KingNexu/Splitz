@@ -7,9 +7,12 @@
 
 //import Foundation
 //
-//@MainActor
-//class MainViewViewModel {
+//final class MainViewModel {
 //
-//    private let
+//    private let billRepository: BillRepository
+//
+//    required init {
+//    billRepository: BillRepository = Injector
+//    }
 //
 //}

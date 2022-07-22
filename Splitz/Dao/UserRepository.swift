@@ -8,3 +8,12 @@
 import Foundation
 
 
+class UserRepository: Repository {
+    
+    private var dao: UserDao
+    
+    init(dao: UserDao) {
+        self.dao = dao
+    }
+    
+}
