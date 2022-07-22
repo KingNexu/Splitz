@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CdBill" representedClassName="CdBill" syncable="YES" codeGenerationType="class">
         <attribute name="caption" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="user" toMany="YES" minCount="1" maxCount="10" deletionRule="Nullify" destinationEntity="CdUser" inverseName="bill" inverseEntity="CdUser"/>
+        <relationship name="users" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="CdUser" inverseName="bill" inverseEntity="CdUser"/>
     </entity>
     <entity name="CdItem" representedClassName="CdItem" syncable="YES" codeGenerationType="class">
         <attribute name="caption" optional="YES" attributeType="String"/>
@@ -13,7 +13,7 @@
     <entity name="CdUser" representedClassName="CdUser" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="bill" maxCount="1" deletionRule="Nullify" destinationEntity="CdBill" inverseName="user" inverseEntity="CdBill"/>
+        <relationship name="bill" maxCount="1" deletionRule="Nullify" destinationEntity="CdBill" inverseName="users" inverseEntity="CdBill"/>
     </entity>
     <elements>
         <element name="CdBill" positionX="125.5986328125" positionY="-253.1634521484375" width="128" height="88"/>

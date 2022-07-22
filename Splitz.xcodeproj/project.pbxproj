@@ -16,7 +16,6 @@
 		0373AE00287C3A60000A7DFF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373ADFF287C3A60000A7DFF /* Repository.swift */; };
 		0373AE02287C3A71000A7DFF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373AE01287C3A71000A7DFF /* UserRepository.swift */; };
 		0391C2B8286AFFFA002532C4 /* MainViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391C2B7286AFFFA002532C4 /* MainViewList.swift */; };
-		0391C2BB286C2277002532C4 /* ScrollViewReactiveHeader in Frameworks */ = {isa = PBXBuildFile; productRef = 0391C2BA286C2277002532C4 /* ScrollViewReactiveHeader */; };
 		039C39AF286DED24002324B4 /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39AE286DED24002324B4 /* NewListView.swift */; };
 		039C39B1286DF7B9002324B4 /* CreateButtonStyle.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39B0286DF7B9002324B4 /* CreateButtonStyle.swift.swift */; };
 		03A2C499286632E9003033D7 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2C498286632E9003033D7 /* UIScreen.swift */; };
@@ -77,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0391C2BB286C2277002532C4 /* ScrollViewReactiveHeader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +263,6 @@
 			);
 			name = Splitz;
 			packageProductDependencies = (
-				0391C2BA286C2277002532C4 /* ScrollViewReactiveHeader */,
 			);
 			productName = Splitz;
 			productReference = 03BD837E28620CBA007DBBD1 /* Splitz.app */;
@@ -566,14 +563,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0391C2BA286C2277002532C4 /* ScrollViewReactiveHeader */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0391C2B9286C2277002532C4 /* XCRemoteSwiftPackageReference "scrollview-reactive-header" */;
-			productName = ScrollViewReactiveHeader;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		032E8C3F2877724C009EC28B /* Splitz_Datamodel.xcdatamodeld */ = {
