@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct NewListView: View {
-    @State var name = ""
-    @State private var personCount: Int = 3
+    
+    @StateObject private var viewModel: NewViewViewModel
+    
+    init() {
+        self._viewModel = StateObject(wrappedValue: NewViewViewModel())
+    }
     
     var body: some View {
         VStack{
             GroupBox {
-                TextField("Text", text: $name)
+                TextField("Title", text: $viewModel.billCaption)
                     .textInputAutocapitalization(.sentences)
                     .textFieldStyle(NewTextFieldStyle(bgColor: Color.white, fontSize: 30, cornerRadius: 12))
                     .padding()
@@ -28,8 +32,8 @@ struct NewListView: View {
                         .font(.system(size: 22, weight: .bold, design: .default))
                     HStack{
                         Button(action: {
-                            if personCount > 1{
-                                personCount -= 1
+                            if viewModel.usersCount > 1{
+                                viewModel.usersCount -= 1
                             }
                         }, label: {
                             Image(systemName: "minus")
@@ -38,11 +42,11 @@ struct NewListView: View {
                         })
                         Image(systemName: "person.fill")
                             .font(.system(size: 45, weight: .bold, design: .default))
-                        Text(String(personCount))
+                        Text(String(viewModel.usersCount))
                             .font(.system(size: 45, weight: .bold, design: .default))
                         Button(action: {
-                            if personCount < 10 {
-                                personCount += 1
+                            if viewModel.usersCount < 10 {
+                                viewModel.usersCount += 1
                             }
                         }, label: {
                             Image(systemName: "plus")
@@ -58,7 +62,9 @@ struct NewListView: View {
             Spacer()
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
-                Button(action: {}, label: {
+                Button(action: {
+                    viewModel.addBill()
+                }, label: {
                     Text("Create")
                         .font(.system(size: 17, weight: .semibold, design: .default))
                 })
