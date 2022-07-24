@@ -9,10 +9,15 @@ import SwiftUI
 
 struct MainView: View {
     
+    @StateObject private var viewModel: MainViewListViewModel
+    
+    init() {
+        //because of @MainActor in ViewModel class
+        self._viewModel = StateObject(wrappedValue: MainViewListViewModel())
+    }
     
     
-    
-    @State private var showSheet = false
+    @State var showSheet = false
     
     var body: some View {
         //TODO: Implement Header

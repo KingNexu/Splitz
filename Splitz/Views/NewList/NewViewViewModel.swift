@@ -35,7 +35,7 @@ final class NewViewViewModel: ViewModel {
             let bill = Bill(
                 id: UUID(),
                 caption: billCaption,
-                users: []
+                users: [User(id: UUID(), name: "jss"),User(id: UUID(), name: "mjs")]
             )
             
             //Store Data
@@ -48,6 +48,22 @@ final class NewViewViewModel: ViewModel {
             
             //TODO: Dismiss Sheet
             
+        }
+    }
+    
+    func getAllBills(){
+        Task.init {
+            let billsData: [Bill]
+            
+            do {
+                billsData = try await billRepository.getAll()
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+            
+            //TODO: View Status
+            self.billsData = billsData
         }
     }
     
