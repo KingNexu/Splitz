@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NewListView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @StateObject private var viewModel: NewViewViewModel
     
     init() {
@@ -64,6 +66,7 @@ struct NewListView: View {
                 .padding(.vertical)
                 Button(action: {
                     viewModel.addBill()
+                    viewModel.sheetPresented.toggle()
                 }, label: {
                     Text("Create")
                         .font(.system(size: 17, weight: .semibold, design: .default))
@@ -80,6 +83,11 @@ struct NewListView: View {
             .foregroundColor(.gray)
             .padding(.top)
         })
+        .onChange(of: viewModel.sheetPresented) { newValue in
+            if newValue {
+                presentationMode.wrappedValue.dismiss()
+            }
+        }
     }
 }
 

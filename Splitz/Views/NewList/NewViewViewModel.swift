@@ -16,6 +16,7 @@ final class NewViewViewModel: ViewModel {
     
     @Published var billCaption: String
     @Published var usersCount: Int
+    @Published var sheetPresented = false
     
     required init (
         billRepository: BillRepository = Injector.getBillRepository(),
