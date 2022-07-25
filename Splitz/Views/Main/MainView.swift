@@ -11,13 +11,11 @@ struct MainView: View {
     
     @StateObject private var viewModel: MainViewListViewModel
     
+    
     init() {
         //because of @MainActor in ViewModel class
         self._viewModel = StateObject(wrappedValue: MainViewListViewModel())
     }
-    
-    
-    @State var showSheet = false
     
     var body: some View {
         //TODO: Implement Header
@@ -37,12 +35,12 @@ struct MainView: View {
         .overlay(alignment: .bottomTrailing, content: {
             Button(action: {
                 //Show sheet
-                showSheet = true
+                viewModel.sheetPresented = true
             }, label: {
                 Image(systemName: "plus")
                     .font(.system(size: 35))
             })
-                .sheet(isPresented: $showSheet, onDismiss: {
+            .sheet(isPresented: $viewModel.sheetPresented, onDismiss: {
                     viewModel.getAllBills()
                 }, content: {
                     NewListView()
