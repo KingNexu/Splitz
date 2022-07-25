@@ -25,7 +25,7 @@ struct MainView: View {
             ZStack{
                 VStack {
                     Spacer()
-                    MainViewList()
+                    MainViewList(billsData: viewModel.billsData)
                 }
                 Spacer()
                 VStack {
@@ -43,7 +43,7 @@ struct MainView: View {
                     .font(.system(size: 35))
             })
                 .sheet(isPresented: $showSheet, onDismiss: {
-                    
+                    viewModel.getAllBills()
                 }, content: {
                     NewListView()
                 })
@@ -53,6 +53,9 @@ struct MainView: View {
         })
         .background(.thickMaterial)
         .ignoresSafeArea(.all, edges: .vertical)
+        .onAppear(perform: {
+            viewModel.getAllBills()
+        })
         
     }
 }

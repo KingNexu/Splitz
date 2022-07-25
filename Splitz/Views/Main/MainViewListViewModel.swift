@@ -12,7 +12,8 @@ final class MainViewListViewModel: ViewModel {
     private let billRepository: BillRepository
     
     @Published var billsData: [Bill] = []
-
+    @Published var sheetPresented: Bool = false
+    
     required init (
         billRepository: BillRepository = Injector.getBillRepository()
     ) {
