@@ -36,7 +36,7 @@ final class MainViewListViewModel: ViewModel {
         }
     }
     
-    func deleteBill(id: UUID) async throws {
+    func deleteBill(id: UUID) {
         Task.init {
             do {
                 try await billRepository.deleteBill(id: id)
