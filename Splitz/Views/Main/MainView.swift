@@ -34,12 +34,18 @@ struct MainView: View {
         }
         .overlay(alignment: .bottomTrailing, content: {
             Button(action: {
-                //Show sheet
-                viewModel.sheetPresented = true
+                //Ignore for LongPress
+                
             }, label: {
                 Image(systemName: "plus")
                     .font(.system(size: 35))
             })
+            .simultaneousGesture(LongPressGesture(minimumDuration: 0.3).onEnded({_ in
+                //
+            }))
+            .simultaneousGesture(TapGesture().onEnded({
+                viewModel.sheetPresented = true
+            }))
             .sheet(isPresented: $viewModel.sheetPresented, onDismiss: {
                     viewModel.getAllBills()
                 }, content: {
