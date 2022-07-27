@@ -36,13 +36,20 @@ final class MainViewListViewModel: ViewModel {
         }
     }
     
-    func deleteBill(id: UUID) {
+    func deleteBill(indexSet: IndexSet) {
         Task.init {
+            let index = indexSet[indexSet.startIndex]
+            
             do {
-                try await billRepository.deleteBill(id: id)
+                let bill = self.billsData[index]
+                try await billRepository.deleteBill(id: bill.id)
             } catch {
+                //TODO: Throw correct error
                 print(error.localizedDescription)
+                return
             }
+            
+                billsData.remove(at: index)
         }
     }
 }
