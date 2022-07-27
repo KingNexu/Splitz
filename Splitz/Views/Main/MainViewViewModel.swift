@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MainViewListViewModel: ViewModel {
+final class MainViewViewModel: ViewModel {
 
     private let billRepository: BillRepository
     

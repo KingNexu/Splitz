@@ -16,14 +16,14 @@ class BillDao: Dao<Bill, CdBill> {
     }
     
     func deleteBill(billId: UUID) async throws {
-        try await delete(predicates: [NSPredicate(format: "id = %@", billId.uuidString)])
+        try await delete(predicates: [NSPredicate(format: "%K == %@", (\CdBill.id)._kvcKeyPathString!, billId.uuidString)])
     }
     
     func getBill(billId: UUID) async throws -> Bill {
         let backgroundContext = storage.taskContext
         
         //TODO: KeyString 
-        let cdBill: CdBill = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "id = %@", billId.uuidString)]) as! CdBill
+        let cdBill: CdBill = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: " %K == %@", (\CdBill.id)._kvcKeyPathString!, billId.uuidString)]) as! CdBill
         
         return cdBill.decode()
         
@@ -35,7 +35,7 @@ class BillDao: Dao<Bill, CdBill> {
         
         let cdBill: CdBill
         
-        let fetchedBill: CdBill? = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "id = %@", bill.id.uuidString)]) as! CdBill?
+        let fetchedBill: CdBill? = try await fetchObject(backgroundContext: backgroundContext, predicates: [NSPredicate(format: "%K = %@", (\CdBill.id)._kvcKeyPathString! ,bill.id.uuidString)]) as! CdBill?
         
         if fetchedBill != nil {
             cdBill = fetchedBill!

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject private var viewModel: MainViewListViewModel
+    @StateObject private var viewModel: MainViewViewModel
     
     
     init() {
         //because of @MainActor in ViewModel class
-        self._viewModel = StateObject(wrappedValue: MainViewListViewModel())
+        self._viewModel = StateObject(wrappedValue: MainViewViewModel())
     }
     
     var body: some View {
@@ -22,7 +22,7 @@ struct MainView: View {
         VStack(alignment: .trailing) {
             ZStack{
                 VStack {
-                    MainViewListItem(name: "Hallo")
+                    MainViewListItem(name: "Empty")
                         .padding()
                     List() {
                         ForEach(viewModel.billsData, id: \.id) {bill in

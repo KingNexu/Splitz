@@ -16,7 +16,7 @@ struct MainViewNavigationBar: View {
                     .foregroundColor(Color.text.logo)
             })
             Spacer()
-            Text("Splitz")
+            Text(LocalizedString.splitz)
                 .font(.system(size: 35, weight: .bold, design: .default))
             Button(action: {}, label: {
                 Image(systemName: "gearshape.fill")
