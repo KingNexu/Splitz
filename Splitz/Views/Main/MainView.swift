@@ -22,8 +22,16 @@ struct MainView: View {
         VStack(alignment: .trailing) {
             ZStack{
                 VStack {
-                    Spacer()
-                    MainViewList(billsData: viewModel.billsData)
+                    MainViewListItem(name: "Hallo")
+                        .padding()
+                    List() {
+                        ForEach(viewModel.billsData, id: \.id) {bill in
+                            MainViewListItem(name: bill.caption)
+                        }
+                        .onDelete{ index in
+                            viewModel.deleteBill(indexSet: index)
+                        }
+                    }
                 }
                 Spacer()
                 VStack {

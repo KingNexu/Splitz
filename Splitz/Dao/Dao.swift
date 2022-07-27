@@ -68,6 +68,7 @@ class Dao<EntityType: Storable, ManagedObjectType: NSManagedObject> {
             fetchedObjects.forEach { entity in
                 backgroundContext.delete(entity)
             }
+            self.storage.saveContext(backgroundContext)
         }
     }
 }
