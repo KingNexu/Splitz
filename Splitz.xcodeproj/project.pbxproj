@@ -12,7 +12,7 @@
 		032E8C4528777444009EC28B /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C4428777444009EC28B /* CoreDataStorage.swift */; };
 		032E8C4728777468009EC28B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E8C4628777468009EC28B /* Storage.swift */; };
 		03361F10286C25E200554395 /* NewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F0F286C25E200554395 /* NewButtonStyle.swift */; };
-		03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F11286DAD9C00554395 /* Gradient.swift.swift */; };
+		03361F12286DAD9C00554395 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03361F11286DAD9C00554395 /* Gradient.swift */; };
 		0373AE00287C3A60000A7DFF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373ADFF287C3A60000A7DFF /* Repository.swift */; };
 		0373AE02287C3A71000A7DFF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373AE01287C3A71000A7DFF /* UserRepository.swift */; };
 		039C39AF286DED24002324B4 /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C39AE286DED24002324B4 /* NewListView.swift */; };
@@ -49,7 +49,7 @@
 		032E8C4428777444009EC28B /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		032E8C4628777468009EC28B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		03361F0F286C25E200554395 /* NewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonStyle.swift; sourceTree = "<group>"; };
-		03361F11286DAD9C00554395 /* Gradient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift.swift; sourceTree = "<group>"; };
+		03361F11286DAD9C00554395 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		0373ADFF287C3A60000A7DFF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Splitz/Dao/Repository.swift; sourceTree = SOURCE_ROOT; };
 		0373AE01287C3A71000A7DFF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserRepository.swift; path = Splitz/Dao/UserRepository.swift; sourceTree = SOURCE_ROOT; };
 		039C39AE286DED24002324B4 /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			children = (
 				03A2C498286632E9003033D7 /* UIScreen.swift */,
 				03A2C4A32866F30D003033D7 /* Color.swift */,
-				03361F11286DAD9C00554395 /* Gradient.swift.swift */,
+				03361F11286DAD9C00554395 /* Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 				03A2C499286632E9003033D7 /* UIScreen.swift in Sources */,
 				03BBAC2C287C1C4F00626A18 /* CdBill+Additions.swift in Sources */,
 				03BBAC2A287C16E200626A18 /* UserDao.swift in Sources */,
-				03361F12286DAD9C00554395 /* Gradient.swift.swift in Sources */,
+				03361F12286DAD9C00554395 /* Gradient.swift in Sources */,
 				0373AE00287C3A60000A7DFF /* Repository.swift in Sources */,
 				03A2C49E28663A04003033D7 /* HeaderShape.swift in Sources */,
 				03BD838228620CBA007DBBD1 /* SplitzApp.swift in Sources */,

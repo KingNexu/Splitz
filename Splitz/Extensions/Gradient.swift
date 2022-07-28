@@ -10,4 +10,5 @@ import SwiftUI
 
 extension LinearGradient{
     static var navigationBarGradient = LinearGradient(colors: [Color.background.navigationBarGradientStart, Color.background.navigationBarGradientEnd], startPoint: .leading, endPoint: .topTrailing)
+    static var buttonDisabledGradient = LinearGradient(colors: [Color.background.buttonDisabledGradientStart, Color.background.buttonDisabledGradientEnd], startPoint: .leading, endPoint: .topTrailing)
 }

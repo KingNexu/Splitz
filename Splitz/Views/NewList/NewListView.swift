@@ -30,6 +30,9 @@ struct NewListView: View {
                         .textInputAutocapitalization(.sentences)
                         .textFieldStyle(NewTextFieldStyle(bgColor: Color.white, fontSize: 30, cornerRadius: 12))
                         .padding()
+                        .onChange(of: viewModel.billCaption, perform: {_ in
+                            viewModel.checkIsTextFieldEmpty()
+                        })
                 }
                 .padding(.bottom)
                 .padding(.horizontal)
@@ -80,12 +83,11 @@ struct NewListView: View {
                         Text(LocalizedString.create)
                             .font(.system(size: 17, weight: .semibold, design: .default))
                     })
-                    .buttonStyle(CreateButtonStyle(bgGradient: LinearGradient.navigationBarGradient, fgColor: .black))
+                    .disabled(viewModel.isTextFieldEmpty)
+                    .buttonStyle(CreateButtonStyle(bgGradient: viewModel.isTextFieldEmpty ? LinearGradient.buttonDisabledGradient : LinearGradient.navigationBarGradient, fgColor: viewModel.isTextFieldEmpty ? .white : .black))
                     .cornerRadius(8)
                 Spacer()
             }
-            .navigationTitle("New List")
-            .navigationBarTitleDisplayMode(.large)
             .onChange(of: viewModel.sheetPresented) { newValue in
                 if newValue {
                     presentationMode.wrappedValue.dismiss()
@@ -98,7 +100,6 @@ struct NewListView: View {
             .foregroundColor(.gray)
             .padding(.top)
         })
-        
     }
 }
 

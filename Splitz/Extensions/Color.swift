@@ -17,5 +17,8 @@ extension Color {
         static let navigationBar = Color("navigationBar")
         static let navigationBarGradientStart = Color("navigationBarGradientStart")
         static let navigationBarGradientEnd = Color("navigationBarGradientEnd")
+        static let buttonDisabledGradientStart = Color("buttonDisabledGradientStart")
+        static let buttonDisabledGradientEnd = Color("buttonDisabledGradientEnd")
+        
     }
 }
