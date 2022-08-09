@@ -10,7 +10,7 @@ import Foundation
 final class NewViewViewModel: ViewModel {
     
     private let billRepository: BillRepository
-    //private let userRepository: UserRepository
+    private let userRepository: UserRepository
     
     @Published var billsData: [Bill] = []
     
@@ -21,11 +21,13 @@ final class NewViewViewModel: ViewModel {
     
     required init (
         billRepository: BillRepository = Injector.getBillRepository(),
+        userRepositroy: UserRepository = Injector.getUserRepository(),
         billCaption: String = "",
         usersCount: Int = 3,
         isTextFieldEmpty: Bool = true
     ) {
         self.billRepository = billRepository
+        self.userRepository = userRepositroy
         self.billCaption = billCaption
         self.usersCount = usersCount
         self.isTextFieldEmpty = isTextFieldEmpty
@@ -35,12 +37,33 @@ final class NewViewViewModel: ViewModel {
         Task {
             //TODO: Add ViewStatus
             
+            
+            
             //Create Bill
-            let bill = Bill(
+            var bill = Bill(
                 id: UUID(),
                 caption: billCaption,
-                users: [User(id: UUID(), name: "jss"),User(id: UUID(), name: "mjs")]
+                users: []
             )
+            
+            var n: Int = 1
+            while n < usersCount {
+                let user = User(
+                    id: UUID(),
+                    name: "User \(n)",
+                    bill: bill
+                )
+                bill.users.append(user)
+                do {
+                    //insert User
+                    try await _ = userRepository.insertOrUpdate(user)
+                } catch {
+                    //TODO: Throw correct error
+                    return
+                }
+                
+                n = n + 1
+            }
             
             //Store Data
             do {
@@ -49,9 +72,6 @@ final class NewViewViewModel: ViewModel {
             } catch {
                 return
             }
-            
-            //TODO: Dismiss Sheet
-            
         }
     }
     

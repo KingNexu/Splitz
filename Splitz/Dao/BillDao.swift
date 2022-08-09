@@ -57,7 +57,7 @@ class BillDao: Dao<Bill, CdBill> {
         let cdBill: CdBill = CdBill(context: backgroundContext)
         cdBill.encode(entity: bill)
         
-        //TODO: Add Relationship
+        //TODO: Add Relationship -> ViewModel
         
         self.storage.saveContext(backgroundContext)
         
