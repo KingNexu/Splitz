@@ -63,7 +63,7 @@ class Dao<EntityType: Storable, ManagedObjectType: NSManagedObject> {
         
         let fetchedObjects: [ManagedObjectType] = try await fetchObjects(backgroundContext: backgroundContext, predicates: predicates)
         
-        //TODO: Rollback?
+        //TODO: Rollback? -> Handle State
         await backgroundContext.perform {
             fetchedObjects.forEach { entity in
                 backgroundContext.delete(entity)

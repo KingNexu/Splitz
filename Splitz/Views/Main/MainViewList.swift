@@ -12,15 +12,18 @@ struct MainViewList: View {
     var billsData: [Bill]
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false, content: {
-            MainViewListItem(name: "")
-                .padding()
-                .opacity(0)
-            ForEach(billsData ,id: \.id){item in
-                MainViewListItem(name: item.caption)
-            }
-        })
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false, content: {
+                MainViewListItem(name: "")
+                    .padding()
+                    .opacity(0)
+                ForEach(billsData ,id: \.id){item in
+                    NavigationLink(destination: DetailView(bill: item), label: MainViewListItem(name: item.caption))
+                    
+                }
+            })
             .padding(.horizontal)
+        }
     }
 }
 
