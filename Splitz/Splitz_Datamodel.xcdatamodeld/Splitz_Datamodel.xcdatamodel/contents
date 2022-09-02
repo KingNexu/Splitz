@@ -18,6 +18,6 @@
     <elements>
         <element name="CdBill" positionX="125.5986328125" positionY="-253.1634521484375" width="128" height="88"/>
         <element name="CdItem" positionX="468.5863037109375" positionY="-25.1395263671875" width="128" height="74"/>
-        <element name="CdUser" positionX="-266.8380126953125" positionY="-58.9661865234375" width="128" height="74"/>
+        <element name="CdUser" positionX="-266.8380126953125" positionY="-58.9661865234375" width="128" height="88"/>
     </elements>
 </model>

@@ -46,6 +46,10 @@ final class NewViewViewModel: ViewModel {
                 users: []
             )
             
+            do {
+                try await _ = billRepository.insert(bill)
+            }
+            
             var n: Int = 1
             while n < usersCount {
                 let user = User(
@@ -53,7 +57,6 @@ final class NewViewViewModel: ViewModel {
                     name: "User \(n)",
                     bill: bill
                 )
-                bill.users.append(user)
                 do {
                     //insert User
                     try await _ = userRepository.insertOrUpdate(user)
@@ -68,7 +71,7 @@ final class NewViewViewModel: ViewModel {
             //Store Data
             do {
                 //insert Bill
-                try await _ =  billRepository.insert(bill: bill)
+                try await _ =  billRepository.insert(bill)
             } catch {
                 return
             }
