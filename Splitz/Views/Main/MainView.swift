@@ -25,8 +25,8 @@ struct MainView: View {
                     MainViewListItem(name: "Empty")
                         .padding()
                     List() {
-                        ForEach(viewModel.billsData, id: \.id) {bill in
-                            MainViewListItem(name: bill.caption)
+                        ForEach(0...50, id: \.self) {bill in
+                            MainViewListItem(name: "bill.caption")
                         }
                         .onDelete{ index in
                             viewModel.deleteBill(indexSet: index)
